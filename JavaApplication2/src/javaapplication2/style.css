@@ -1,0 +1,38 @@
+
+.table-view{
+    -fx-background-color: #ccccff;
+    -fx-background-radius: 30;
+    -fx-align-content: center; 
+
+
+}
+
+.table-view .column-header{
+    -fx-background-color:  #9933ff; 
+    -fx-padding: 0 0 10 0;
+            -fx-border-radius: 30;
+
+
+}
+
+.table-view .table-column{
+    -fx-alignment: CENTER;
+    -fx-font-family: century gothic;
+    -fx-font-size: 14px; 
+    
+}
+
+.table-view .column-header, .table-view .filler
+{
+    -fx-size: 40; 
+    -fx-border-width: 0 0 10 0; 
+}
+
+.table-view .column-header .label
+{
+    -fx-text-fill: #fff
+}
+
+.button:hover{
+    -fx-background-color: white
+}

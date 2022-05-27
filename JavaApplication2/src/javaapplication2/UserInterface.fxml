@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootanchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="872.0" prefWidth="1237.0" style="-fx-background-color: #ffcccc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication2.UserInterface">
+   <children>
+      <AnchorPane fx:id="options_pane" prefHeight="872.0" prefWidth="251.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em;">
+         <children>
+            <ImageView fitHeight="144.0" fitWidth="149.0" layoutX="53.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/account.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="account_name" layoutX="13.0" layoutY="194.0" prefHeight="43.0" prefWidth="223.0" text="Ezz Addin Kukhun">
+               <font>
+                  <Font name="Century Gothic Bold" size="26.0" />
+               </font>
+            </Label>
+            <VBox layoutX="6.0" layoutY="311.0" prefHeight="561.0" prefWidth="237.0" style="-fx-border-radius: 10em;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#homePage" prefHeight="60.0" prefWidth="237.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-border-color: #fff;" text="Home Page" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#profilePage" prefHeight="60.0" prefWidth="237.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-border-color: #fff;" text="Profile Settings" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="showLeaveReqPane" mnemonicParsing="false" onAction="#leavesPage" prefHeight="60.0" prefWidth="237.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-border-color: #fff;" text="Leave Request" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#vacationsPage" prefHeight="60.0" prefWidth="329.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-border-color: #fff;" text="Vacation Request" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/sunbed.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#showActivitesPane" prefHeight="60.0" prefWidth="329.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-border-color: #fff;" text="Activites" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/tablet.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#editPassword" prefHeight="60.0" prefWidth="329.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-border-color: #fff;" text="Edit Password" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#logOut" prefHeight="60.0" prefWidth="329.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-border-color: #fff;" text="Log Out" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/power.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Label fx:id="username" layoutX="74.0" layoutY="237.0" prefHeight="43.0" prefWidth="101.0" text="username">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="home_pane" layoutX="251.0" layoutY="-2.0" prefHeight="872.0" prefWidth="988.0" style="-fx-background-color: #ffcccc;" visible="false">
+         <children>
+            <Label layoutX="374.0" prefHeight="60.0" prefWidth="223.0" text="Home Page">
+               <font>
+                  <Font name="Century Gothic Bold" size="38.0" />
+               </font>
+            </Label>
+            <HBox layoutX="7.0" layoutY="153.0" prefHeight="201.0" prefWidth="962.0">
+               <children>
+                  <Pane fx:id="pane" prefHeight="188.0" prefWidth="223.0" style="-fx-background-color: #7332a8; -fx-background-radius: 5em;" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="total_vacations_year" layoutX="74.0" layoutY="36.0" prefHeight="83.0" prefWidth="77.0" text="31" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="64.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="111.0" prefHeight="40.0" prefWidth="166.0" text="Vacations in a year" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane fx:id="pane1" prefHeight="188.0" prefWidth="223.0" style="-fx-background-color: #7332a8; -fx-background-radius: 5em;" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="current_vacations" layoutX="74.0" layoutY="37.0" prefHeight="83.0" prefWidth="77.0" text="22" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="64.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="45.0" layoutY="113.0" prefHeight="40.0" prefWidth="149.0" text="Taken Vacations" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane fx:id="pane11" prefHeight="188.0" prefWidth="223.0" style="-fx-background-color: #7332a8; -fx-background-radius: 5em;" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="total_hour_leaves" layoutX="29.0" layoutY="36.0" prefHeight="84.0" prefWidth="166.0" text="11:26" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="64.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="112.0" prefHeight="40.0" prefWidth="110.0" text="Leaves Hours" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Pane fx:id="pane111" prefHeight="188.0" prefWidth="223.0" style="-fx-background-color: #7332a8; -fx-background-radius: 5em;" stylesheets="@style.css">
+                     <children>
+                        <Label fx:id="total_vacations_year111" layoutX="66.0" layoutY="36.0" prefHeight="84.0" prefWidth="91.0" text="12" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="64.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="111.0" prefHeight="40.0" prefWidth="166.0" text="Leaves As Vacations" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="Century Gothic Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Label layoutX="69.0" layoutY="94.0" prefHeight="40.0" prefWidth="188.0" text="Statistical Data">
+               <font>
+                  <Font name="Century Gothic Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="14.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/statistics.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="69.0" layoutY="410.0" prefHeight="40.0" prefWidth="166.0" text="Notifications">
+               <font>
+                  <Font name="Century Gothic Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="14.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/chat.png" />
+               </image>
+            </ImageView>
+            <TableView layoutX="15.0" layoutY="478.0" prefHeight="354.0" prefWidth="927.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn prefWidth="142.0" text="From" />
+                <TableColumn prefWidth="180.0" text="Date" />
+                  <TableColumn prefWidth="217.0" text="Time" />
+                  <TableColumn prefWidth="387.0" text="Message Text" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#showMore" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/more.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="profile_settings" layoutX="254.0" layoutY="4.0" prefHeight="865.0" prefWidth="982.0" style="-fx-background-color: #ffcccc;" visible="false">
+         <children>
+            <Label layoutX="350.0" layoutY="14.0" prefHeight="48.0" prefWidth="272.0" text="Profile Settings">
+               <font>
+                  <Font name="Century Gothic Bold" size="38.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profile_photo" fitHeight="218.0" fitWidth="223.0" layoutX="374.0" layoutY="80.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imgs/anonymous.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="416.0" layoutY="289.0" onAction="#chooseProfilePhoto" prefHeight="60.0" prefWidth="141.0" text="Edit Profile Photo" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Hyperlink>
+            <VBox layoutX="118.0" layoutY="373.0" prefHeight="402.0" prefWidth="298.0">
+               <children>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="First Name" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fname" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="Ezz Addin">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/identity.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="Mid Name" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="midname" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="Helal">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/identity.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="Last Name" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lname" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="Kukhun">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/identity.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="ID" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="id" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="406812701">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/id.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="166.0" text="Employment Number" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="emp_number" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="406812701">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/employee.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="166.0" text="Username" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="uname" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="ezzhelalkukhun">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/user.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="557.0" layoutY="373.0" prefHeight="417.0" prefWidth="298.0">
+               <children>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="BirthDate" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="bdate" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="2000-09-10">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/cupcake.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="State" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="state" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="Palestine">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/planet.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="City" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="city" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="Nablus">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/buildings.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="91.0" text="Email" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="email" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="ezkukhun2000@gmail.com">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/gmail.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="60.0" prefWidth="272.0">
+                     <children>
+                        <Pane layoutX="72.0" prefHeight="60.0" prefWidth="188.0">
+                           <children>
+                              <Label layoutX="3.0" layoutY="5.0" prefHeight="19.0" prefWidth="122.0" text="Phone Number" textFill="#e85757">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="phone_number" layoutX="3.0" layoutY="24.0" prefHeight="32.0" prefWidth="195.0" text="0599836899">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="48.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/phone.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="260.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/editing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#showMore2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/more.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leave_req_pane" layoutX="254.0" layoutY="7.0" prefHeight="859.0" prefWidth="982.0" visible="false">
+         <children>
+            <Label layoutX="350.0" layoutY="14.0" prefHeight="48.0" prefWidth="272.0" text="Leave Request">
+               <font>
+                  <Font name="Century Gothic Bold" size="38.0" />
+               </font>
+            </Label>
+            <TableView fx:id="leaves_table" layoutX="18.0" layoutY="170.0" prefHeight="487.0" prefWidth="936.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="le_id" prefWidth="133.7" resizable="false" text="ID" />
+                <TableColumn fx:id="le_date" prefWidth="133.7" resizable="false" text="Date" />
+                  <TableColumn fx:id="le_start" prefWidth="133.7" resizable="false" text="Start Time" />
+                  <TableColumn fx:id="le_end" prefWidth="133.7" resizable="false" text="End Time" />
+                  <TableColumn fx:id="le_duration" prefWidth="133.7" resizable="false" text="Type" />
+                  <TableColumn fx:id="le_type" prefWidth="133.7" text="Duration" />
+                  <TableColumn fx:id="le_marked" prefWidth="133.7" text="Marked Leave" />
+              </columns>
+            </TableView>
+            <Label layoutX="26.0" layoutY="110.0" prefHeight="31.0" prefWidth="178.0" text="Filter Result By:">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="204.0" layoutY="107.0" prefHeight="31.0" prefWidth="242.0" />
+            <Button layoutX="468.0" layoutY="100.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="SEARCH" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/magnifying-glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="609.0" layoutY="691.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em; -fx-border-color: #111;" text="DELETE" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="446.0" layoutY="691.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em; -fx-border-color: #111;" text="REFRESH" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="280.0" layoutY="691.0" mnemonicParsing="false" onAction="#makeNewLeaveRequest" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em; -fx-border-color: #111;" text="ADD" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/round-add-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="8.0" layoutY="6.0" onMouseClicked="#showMore3" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/more.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="vacation_pane_req" layoutX="252.0" layoutY="7.0" prefHeight="859.0" prefWidth="982.0" visible="false">
+         <children>
+            <Label layoutX="324.0" layoutY="14.0" prefHeight="48.0" prefWidth="335.0" text="Vacation Request">
+               <font>
+                  <Font name="Century Gothic Bold" size="38.0" />
+               </font>
+            </Label>
+            <TableView layoutX="18.0" layoutY="170.0" prefHeight="487.0" prefWidth="936.0" stylesheets="@style.css">
+               <columns>
+                  <TableColumn prefWidth="234.0" resizable="false" text="Vacation ID" />
+                  <TableColumn prefWidth="234.0" resizable="false" text="Applicant Date" />
+                  <TableColumn prefWidth="234.0" resizable="false" text="Vacation Date" />
+                  <TableColumn prefWidth="234.0" resizable="false" text="Marked Vacation" />
+               </columns>
+            </TableView>
+            <Label layoutX="26.0" layoutY="110.0" prefHeight="31.0" prefWidth="178.0" text="Filter Result By:">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="204.0" layoutY="107.0" prefHeight="31.0" prefWidth="242.0" />
+            <Button layoutX="468.0" layoutY="100.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="SEARCH" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/magnifying-glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="609.0" layoutY="691.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em; -fx-border-color: #111;" text="DELETE" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="446.0" layoutY="691.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em; -fx-border-color: #111;" text="REFRESH" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="280.0" layoutY="691.0" mnemonicParsing="false" onAction="#makeNewVacationRequest" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em; -fx-border-color: #111;" text="ADD" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/round-add-button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="8.0" layoutY="6.0" onMouseClicked="#showMore4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/more.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Activites_Pane" layoutX="258.0" layoutY="4.0" prefHeight="865.0" prefWidth="975.0" visible="false">
+         <children>
+            <Label layoutX="388.0" layoutY="14.0" prefHeight="48.0" prefWidth="160.0" text="Activites">
+               <font>
+                  <Font name="Century Gothic Bold" size="38.0" />
+               </font>
+            </Label>
+            <TableView fx:id="table1" layoutX="18.0" layoutY="240.0" prefHeight="561.0" prefWidth="936.0" stylesheets="@style.css" visible="false">
+               <columns>
+                  <TableColumn prefWidth="133.7" resizable="false" text="ID" />
+                  <TableColumn prefWidth="133.7" resizable="false" text="Date" />
+                  <TableColumn prefWidth="133.7" resizable="false" text="Start Time" />
+                  <TableColumn prefWidth="133.7" resizable="false" text="End Time" />
+                  <TableColumn prefWidth="133.7" resizable="false" text="Duration" />
+                  <TableColumn prefWidth="265.0" text="Type" />
+               </columns>
+            </TableView>
+            <Label layoutX="26.0" layoutY="162.0" prefHeight="31.0" prefWidth="178.0" text="Filter Result By:">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="204.0" layoutY="162.0" prefHeight="31.0" prefWidth="242.0" />
+            <Button layoutX="777.0" layoutY="155.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="141.0" style="-fx-background-color: #ff5050; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="SEARCH" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/magnifying-glass.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="8.0" layoutY="6.0" onMouseClicked="#showMore5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/more.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="first_choice" layoutX="367.0" layoutY="87.0" mnemonicParsing="false" onAction="#selectTable1" prefHeight="31.0" prefWidth="101.0" text="Leaves" textFill="#e83b3b">
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="choice" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="second_choice" layoutX="488.0" layoutY="87.0" mnemonicParsing="false" onAction="#selectTable2" prefHeight="31.0" prefWidth="122.0" text="Vacations" textFill="#e83b3b" toggleGroup="$choice">
+               <font>
+                  <Font name="Century Gothic Bold" size="17.0" />
+               </font>
+            </RadioButton>
+            <TextField layoutX="468.0" layoutY="161.0" prefHeight="32.0" prefWidth="260.0" promptText="Enter Key">
+               <font>
+                  <Font name="Century Gothic" size="16.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="table2" layoutX="8.0" layoutY="233.0" prefHeight="487.0" prefWidth="936.0" stylesheets="@style.css" visible="false">
+               <columns>
+                  <TableColumn prefWidth="234.0" resizable="false" text="Vacation ID" />
+                  <TableColumn prefWidth="234.0" resizable="false" text="Applicant Date" />
+                  <TableColumn prefWidth="234.0" resizable="false" text="Vacation Date" />
+                  <TableColumn prefWidth="234.0" resizable="false" text="Marked Vacation" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
